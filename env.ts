@@ -15,9 +15,19 @@
 import Env from '@ioc:Adonis/Core/Env'
 
 export default Env.rules({
+  // server
+  NODE_ENV: Env.schema.enum(['development', 'production', 'testing'] as const),
   HOST: Env.schema.string({ format: 'host' }),
   PORT: Env.schema.number(),
+
+  // application
   APP_KEY: Env.schema.string(),
-  APP_NAME: Env.schema.string(),
-  NODE_ENV: Env.schema.enum(['development', 'production', 'testing'] as const),
+
+  // database
+  DB_CONNECTION: Env.schema.enum(['sqlite'] as const),
+  DB_HOST: Env.schema.string.optional(),
+  DB_PORT: Env.schema.number.optional(),
+  DB_USER: Env.schema.string.optional(),
+  DB_PASSWORD: Env.schema.string.optional(),
+  DB_NAME: Env.schema.string.optional(),
 })
