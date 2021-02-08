@@ -1,5 +1,4 @@
 module.exports = {
-  '*': ['prettier --write'],
-  '*.ts': ['eslint --fix'],
+  '*.ts': ['eslint --fix', 'prettier --write'],
   'package.json': ['sort-package-json'],
 }
