@@ -12,6 +12,7 @@
     "build": "node ace build --production",
     "dev": "node ace serve --watch",
     "format": "prettier --write .",
+    "postinstall": "cpy .env.example .env --rename --no-overwrite",
     "lint": "eslint . --ext=.ts",
     "start": "node server.js"
   },
@@ -27,6 +28,7 @@
     "@commitlint/cli": "^11.0.0",
     "@droplt/commitlint-config": "^1.1.0",
     "adonis-preset-ts": "^2.0.0",
+    "cpy-cli": "^3.1.1",
     "eslint": "^7.19.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-adonis": "^1.2.0",
