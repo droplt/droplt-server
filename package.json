@@ -12,7 +12,7 @@
     "build": "node ace build --production",
     "db:migrate": "node ace migration:run",
     "db:reset": "run-s db:rollback db:migrate",
-    "db:rollback": "node ace migration:run",
+    "db:rollback": "node ace migration:rollback",
     "predev": "run-s postinstall db:reset",
     "dev": "node ace serve --watch",
     "format": "prettier --write .",
@@ -25,6 +25,7 @@
     "test:watch": "nodemon -x node -r @adonisjs/assembler/build/register tests.ts"
   },
   "dependencies": {
+    "@adonisjs/auth": "^5.1.1",
     "@adonisjs/core": "^5.0.4-preview-rc",
     "@adonisjs/lucid": "^10.0.0",
     "@adonisjs/repl": "^1.0.0",
