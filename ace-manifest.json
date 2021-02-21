@@ -1,4 +1,12 @@
 {
+  "dump:routes": {
+    "settings": { "loadApp": true },
+    "commandPath": "./commands/DumpRoutes",
+    "commandName": "dump:routes",
+    "description": "Dump routes list in README.md file",
+    "args": [],
+    "flags": []
+  },
   "dump:rcfile": {
     "settings": {},
     "commandPath": "@adonisjs/core/build/commands/DumpRc",
@@ -8,20 +16,13 @@
     "flags": []
   },
   "list:routes": {
-    "settings": {
-      "loadApp": true
-    },
+    "settings": { "loadApp": true },
     "commandPath": "@adonisjs/core/build/commands/ListRoutes",
     "commandName": "list:routes",
     "description": "List application routes",
     "args": [],
     "flags": [
-      {
-        "name": "json",
-        "propertyName": "json",
-        "type": "boolean",
-        "description": "Output as JSON"
-      }
+      { "name": "json", "propertyName": "json", "type": "boolean", "description": "Output as JSON" }
     ]
   },
   "generate:key": {
@@ -33,11 +34,7 @@
     "flags": []
   },
   "repl": {
-    "settings": {
-      "loadApp": true,
-      "environment": "repl",
-      "stayAlive": true
-    },
+    "settings": { "loadApp": true, "environment": "repl", "stayAlive": true },
     "commandPath": "@adonisjs/repl/build/commands/AdonisRepl",
     "commandName": "repl",
     "description": "Start a new REPL session",
@@ -45,9 +42,7 @@
     "flags": []
   },
   "db:seed": {
-    "settings": {
-      "loadApp": true
-    },
+    "settings": { "loadApp": true },
     "commandPath": "@adonisjs/lucid/build/commands/DbSeed",
     "commandName": "db:seed",
     "description": "Execute database seeder files",
@@ -108,9 +103,7 @@
     ]
   },
   "make:migration": {
-    "settings": {
-      "loadApp": true
-    },
+    "settings": { "loadApp": true },
     "commandPath": "@adonisjs/lucid/build/commands/MakeMigration",
     "commandName": "make:migration",
     "description": "Make a new migration file",
@@ -167,9 +160,7 @@
     "flags": []
   },
   "migration:run": {
-    "settings": {
-      "loadApp": true
-    },
+    "settings": { "loadApp": true },
     "commandPath": "@adonisjs/lucid/build/commands/Migration/Run",
     "commandName": "migration:run",
     "description": "Run pending migrations",
@@ -197,9 +188,7 @@
     ]
   },
   "migration:rollback": {
-    "settings": {
-      "loadApp": true
-    },
+    "settings": { "loadApp": true },
     "commandPath": "@adonisjs/lucid/build/commands/Migration/Rollback",
     "commandName": "migration:rollback",
     "description": "Rollback migrations to a given batch number",
@@ -233,9 +222,7 @@
     ]
   },
   "migration:status": {
-    "settings": {
-      "loadApp": true
-    },
+    "settings": { "loadApp": true },
     "commandPath": "@adonisjs/lucid/build/commands/Migration/Status",
     "commandName": "migration:status",
     "description": "Check migrations current status.",
