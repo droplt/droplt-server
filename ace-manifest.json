@@ -1,12 +1,4 @@
 {
-  "dump:routes": {
-    "settings": { "loadApp": true },
-    "commandPath": "./commands/DumpRoutes",
-    "commandName": "dump:routes",
-    "description": "Dump routes list in README.md file",
-    "args": [],
-    "flags": []
-  },
   "dump:rcfile": {
     "settings": {},
     "commandPath": "@adonisjs/core/build/commands/DumpRc",

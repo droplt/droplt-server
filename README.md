@@ -29,7 +29,6 @@ It is the perfect companion for a Plex Media Server.
   - [Unit testing](#unit-testing)
   - [Functional testing](#functional-testing)
   - [Tests helpers _(traits)_](#tests-helpers-traits)
-- [:bicyclist: Routes](#bicyclist-routes)
 
 # :whale: Installation
 
@@ -175,29 +174,3 @@ Some helpers are available in tests using the `trait` design pattern.
 // It also truncate the User table after each test suite
 trait('Test/Traits/User', { password: 'mypassword' })
 ```
-
-# :bicyclist: Routes
-
-Here is an overview of all the API routes containing their endpoint, verbs and middlewares applied to each route.
-
-<!-- routes -->
-| Auth               | Name             | Verb(s)    | Endpoint      | Handler                          | Middleware(s)                | Validator(s)   |
-| ------------------ | ---------------- | ---------- | ------------- | -------------------------------- | ---------------------------- | -------------- |
-| :white_check_mark: | auth.index       | HEAD, GET  | /auth         | AuthenticationController.index   |                              |                |
-| :x:                | auth.store       | POST       | /auth         | AuthenticationController.store   |                              |                |
-| :white_check_mark: | auth.destroy     | DELETE     | /auth/:id     | AuthenticationController.destroy |                              |                |
-| :white_check_mark: | users.index      | HEAD, GET  | /users        | UsersController.index            | paginate:20, orderBy:id:asc  |                |
-| :white_check_mark: | users.store      | POST       | /users        | UsersController.store            |                              | UserStore      |
-| :white_check_mark: | users.show       | HEAD, GET  | /users/:id    | UsersController.show             |                              |                |
-| :white_check_mark: | users.update     | PUT, PATCH | /users/:id    | UsersController.update           |                              | UserUpdate     |
-| :white_check_mark: | users.destroy    | DELETE     | /users/:id    | UsersController.destroy          |                              |                |
-| :white_check_mark: | torrents.index   | HEAD, GET  | /torrents     | TorrentsController.index         | paginate:20, orderBy:id:desc |                |
-| :white_check_mark: | torrents.store   | POST       | /torrents     | TorrentsController.store         | upload:file                  | TorrentStore   |
-| :white_check_mark: | torrents.show    | HEAD, GET  | /torrents/:id | TorrentsController.show          |                              |                |
-| :white_check_mark: | torrents.update  | PUT, PATCH | /torrents/:id | TorrentsController.update        |                              |                |
-| :white_check_mark: | torrents.destroy | DELETE     | /torrents/:id | TorrentsController.destroy       |                              |                |
-| :white_check_mark: | torrents.parse   | POST       | /parse        | TorrentsController.parse         | upload:file                  | TorrentStore   |
-| :white_check_mark: | trackers.index   | HEAD, GET  | /trackers     | TrackersController.index         |                              |                |
-| :white_check_mark: | searches.index   | HEAD, GET  | /searches     | SearchesController.index         |                              |                |
-| :white_check_mark: | searches.store   | POST       | /searches     | SearchesController.store         |                              | SearchDownload |
-<!-- routesstop -->
